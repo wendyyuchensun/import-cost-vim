@@ -13,6 +13,7 @@
   "author": "Wendy Yuchen Sun",
   "license": "ISC",
   "dependencies": {
-    "import-cost": "^1.3.1"
+    "import-cost": "^1.3.1",
+    "typescript": "^2.7.2"
   }
 }
