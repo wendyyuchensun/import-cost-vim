@@ -1,0 +1,15 @@
+{
+  "name": "import-cost-vim",
+  "version": "1.0.0",
+  "description": "Displays import size of JavaScript packages inside Vim.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "import-cost",
+    "vim"
+  ],
+  "author": "Wendy Yuchen Sun",
+  "license": "ISC"
+}
