@@ -1,8 +1,10 @@
 "use strict";
 exports.__esModule = true;
 var import_cost_1 = require("import-cost");
+var fs = require('fs');
 var args = process.argv.slice(2);
-var fileTypeArg = args[2] === 'javascript' ? import_cost_1.JAVASCRIPT : import_cost_1.TYPESCRIPT;
-args.splice(2, 1, fileTypeArg);
+var fileTypeArg = args[1] === 'js' ? import_cost_1.JAVASCRIPT : import_cost_1.TYPESCRIPT;
+var fileContents = fs.readFileSync(args[0], 'utf8');
+args.splice(1, 1, fileContents, fileTypeArg);
 var emitter = import_cost_1.importCost.apply(void 0, args);
-emitter.on('start', function (pack) { return console.log('start'); });
+emitter.on('done', function (pack) { return console.log(pack); });
